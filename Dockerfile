@@ -2,8 +2,8 @@ FROM frolvlad/alpine-glibc
 
 RUN export MECAB_VERSION=0.996 \
            IPADIC_VERSION=2.7.0-20070801 \
-           MECAB_URL=https://drive.google.com/uc?export=download&id=0B4y35FiV1wh7cENtOXlicTFaRUE \
-           IPADIC_URL=https://drive.google.com/uc?export=download&id=0B4y35FiV1wh7MWVlSDBCSXZMTXM && \
+           MECAB_URL="https://drive.google.com/uc?export=download&id=0B4y35FiV1wh7cENtOXlicTFaRUE" \
+           IPADIC_URL="https://drive.google.com/uc?export=download&id=0B4y35FiV1wh7MWVlSDBCSXZMTXM" && \
     apk add --no-cache libstdc++ && \
     apk add --no-cache --virtual=build-dependencies build-base openssl curl git bash file sudo openssh && \
     curl -SL -o mecab-$MECAB_VERSION.tar.gz $MECAB_URL && \
